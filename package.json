@@ -1,0 +1,9 @@
+{
+  "name": "le-petit-chef",
+  "license": "ISC",
+  "author": "Felix Icaza",
+  "scripts": {
+    "gift": "pnpx servor ./gift-card --reload",
+    "location": "pnpx servor ./location --reload"
+  }
+}
