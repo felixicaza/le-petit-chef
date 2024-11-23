@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="//cdn.jsdelivr.net/" />
+    <style>
+      /* roboto-flex-latin-wght-normal */
+      @font-face {
+        font-family: "Roboto Flex Variable";
+        font-style: normal;
+        font-display: swap;
+        font-weight: 100 1000;
+        src: url(https://cdn.jsdelivr.net/fontsource/fonts/roboto-flex:vf@latest/latin-wght-normal.woff2)
+          format("woff2-variations");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC,
+          U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Mobile Header -->
+    <header class="mobile">
+      <section class="logo">
+        <div class="container">
+          <img src="./images/logo.png" alt="Logo" width="93" height="62" />
+        </div>
+      </section>
+      <article class="description">
+        <div class="container">
+          <section>
+            <h1>Gift your loved ones a memorable dining experience</h1>
+            <p>
+              Surprise your loved ones with a voucher to discover the show of
+              the world’s smallest chef
+            </p>
+            <div class="rating">
+              <img src="./icons/star.svg" alt="Star" width="24" height="24" />
+              <img src="./icons/star.svg" alt="Star" width="24" height="24" />
+              <img src="./icons/star.svg" alt="Star" width="24" height="24" />
+              <img src="./icons/star.svg" alt="Star" width="24" height="24" />
+              <img src="./icons/star.svg" alt="Star" width="24" height="24" />
+            </div>
+            <p class="rating-description">4.8 out of 5,841 reviews</p>
+            <img
+              src="./images/mobile-header.png"
+              alt="Mobile Header"
+              width="292"
+              height="330"
+            />
+          </section>
+          <section>
+            <a class="button" href="#">
+              <span>
+                <img
+                  src="./icons/gift-white.svg"
+                  alt="Check Availability"
+                  width="24"
+                  height="24"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </span>
+              <span>Secure Your Seats</span>
+            </a>
+            <a class="link" href="#">Prefer to book? Click here!</a>
+            <ul>
+              <li>
+                <span>
+                  <img
+                    src="./icons/voucher.svg"
+                    alt="Voucher"
+                    width="24"
+                    height="24"
+                  />
+                </span>
+                Vouchers usable all around Germany restaurants
+              </li>
+              <li>
+                <span>
+                  <img
+                    src="./icons/clock.svg"
+                    alt="Clock"
+                    width="24"
+                    height="24"
+                  />
+                </span>
+                Redeem anytime within 3 years
+              </li>
+              <li>
+                <span>
+                  <img
+                    src="./icons/delivery.svg"
+                    alt="Delivery"
+                    width="24"
+                    height="24"
+                  />
+                </span>
+                Physical delivery of the voucher within one day
+              </li>
+            </ul>
+          </section>
+        </div>
+      </article>
+      <section class="banner">
+        <div class="container">
+          <p>Get free shipping, 3D Greeting Card and a Plush Toy</p>
+          <div class="offer-info">
+            <p>Offer Ends In</p>
+            <div class="time-container">
+              <p>
+                <span class="time">21</span>
+                Hrs
+              </p>
+              <p>
+                <span class="time">15</span>
+                Min
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="gift-container container">
+        <div class="steps">
+          <div>
+            <p>1</p>
+          </div>
+          <div>
+            <p>2</p>
+          </div>
+          <div>
+            <p>3</p>
+          </div>
+        </div>
+        <h2>Select your voucher design</h2>
+        <div class="gift-cards">
+          <button class="gift standard" type="button">
+            <img
+              src="./images/gift-cards/standard.png"
+              alt="Standard"
+              width="210"
+              height="125"
+            />
+            <p>Standard</p>
+          </button>
+          <button class="gift christmas" type="button">
+            <img
+              src="./images/gift-cards/christmas.png"
+              alt="Christmas"
+              width="210"
+              height="125"
+            />
+            <p>Christmas</p>
+          </button>
+          <button class="gift flowers" type="button">
+            <img
+              src="./images/gift-cards/flowers.png"
+              alt="Flowers"
+              width="210"
+              height="125"
+            />
+            <p>Flowers</p>
+          </button>
+          <button class="gift birthday" type="button">
+            <img
+              src="./images/gift-cards/birthday.png"
+              alt="Birthday"
+              width="210"
+              height="125"
+            />
+            <p>Birthday</p>
+          </button>
+          <button class="gift valentine" type="button">
+            <img
+              src="./images/gift-cards/valentine.png"
+              alt="Valentine"
+              width="210"
+              height="125"
+            />
+            <p>Valentine</p>
+          </button>
+        </div>
+        <button class="button-gift" type="button">Select Design</button>
+      </section>
+    </header>
+
+    <!-- Offer -->
+    <section class="offer">
+      <div class="container">
+        <p>Free Shipping, 3D Greeting Card and Plush Toy</p>
+        <a href="#">
+          <span>
+            <img
+              src="./icons/gift.svg"
+              alt="Check Availability"
+              width="24"
+              height="24"
+              decoding="async"
+              fetchpriority="low"
+              loading="lazy"
+            />
+          </span>
+          <span>See our gift card options</span>
+        </a>
+        <div class="offer-time">
+          <span>Offer End In</span>
+          <span>
+            <span class="time">21</span>
+            Hrs
+          </span>
+          <span>
+            <span class="time">15</span>
+            Min
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero -->
+    <article class="hero">
+      <div class="container">
+        <section class="logo-container">
+          <img src="./images/logo.png" alt="Logo" width="141" height="80" />
+        </section>
+        <div class="content">
+          <article>
+            <header>
+              <h1>Gift your loved ones a memorable dining experience</h1>
+              <p>
+                Surprise your loved ones with a voucher to discover the show of
+                the world’s smallest chef
+              </p>
+              <div class="rating">
+                <div>
+                  <img
+                    src="./icons/star.svg"
+                    alt="Star"
+                    width="24"
+                    height="24"
+                  />
+                  <img
+                    src="./icons/star.svg"
+                    alt="Star"
+                    width="24"
+                    height="24"
+                  />
+                  <img
+                    src="./icons/star.svg"
+                    alt="Star"
+                    width="24"
+                    height="24"
+                  />
+                  <img
+                    src="./icons/star.svg"
+                    alt="Star"
+                    width="24"
+                    height="24"
+                  />
+                  <img
+                    src="./icons/star.svg"
+                    alt="Star"
+                    width="24"
+                    height="24"
+                  />
+                </div>
+                <p>4.8 out of 5,841 reviews</p>
+              </div>
+            </header>
+            <footer>
+              <h2>Free Shipping, 3D Greeting Card and Plush Toy</h2>
+              <p>Offer Ends In</p>
+              <p class="time-container">
+                <span>
+                  <span class="time">21</span>
+                  Hrs
+                </span>
+                <span>
+                  <span class="time">15</span>
+                  Min
+                </span>
+              </p>
+              <div class="cards">
+                <section class="card">
+                  <div>
+                    <img
+                      src="./icons/voucher.svg"
+                      alt="Voucher"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <p>Vouchers usable all around Germany restaurants</p>
+                </section>
+                <section class="card">
+                  <div>
+                    <img
+                      src="./icons/clock.svg"
+                      alt="Clock"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <p>Expiry date is 3 years according to eureopan law</p>
+                </section>
+                <section class="card">
+                  <div>
+                    <img
+                      src="./icons/delivery.svg"
+                      alt="Delivery"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <p>
+                    Physical delivery within 1 day and instant delivery via
+                    digital
+                  </p>
+                </section>
+              </div>
+            </footer>
+          </article>
+          <article class="gift">
+            <section class="steps">
+              <div>
+                <p>1</p>
+              </div>
+              <div>
+                <p>2</p>
+              </div>
+              <div>
+                <p>3</p>
+              </div>
+            </section>
+            <h3>Select your voucher design</h3>
+            <div class="gift-cards">
+              <button class="gift standard" type="button">
+                <img
+                  src="./images/gift-cards/standard.png"
+                  alt="Standard"
+                  width="210"
+                  height="125"
+                />
+                <p>Standard</p>
+              </button>
+              <button class="gift christmas" type="button">
+                <img
+                  src="./images/gift-cards/christmas.png"
+                  alt="Christmas"
+                  width="210"
+                  height="125"
+                />
+                <p>Christmas</p>
+              </button>
+              <button class="gift flowers" type="button">
+                <img
+                  src="./images/gift-cards/flowers.png"
+                  alt="Flowers"
+                  width="210"
+                  height="125"
+                />
+                <p>Flowers</p>
+              </button>
+              <button class="gift birthday" type="button">
+                <img
+                  src="./images/gift-cards/birthday.png"
+                  alt="Birthday"
+                  width="210"
+                  height="125"
+                />
+                <p>Birthday</p>
+              </button>
+              <button class="gift valentine" type="button">
+                <img
+                  src="./images/gift-cards/valentine.png"
+                  alt="Valentine"
+                  width="210"
+                  height="125"
+                />
+                <p>Valentine</p>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </article>
+
+    <!-- Brands -->
+    <section class="brands">
+      <div class="container">
+        <img
+          src="./images/brands/wired.png"
+          alt="Wired Logo"
+          width="154"
+          height="90"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <img
+          src="./images/brands/cnn.png"
+          alt="Logo CNN"
+          width="113"
+          height="90"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <img
+          src="./images/brands/yahoo.png"
+          alt="Logo Yahoo"
+          width="107"
+          height="90"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <img
+          src="./images/brands/forbes.png"
+          alt="Logo Forbes"
+          width="107"
+          height="90"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <img
+          src="./images/brands/culture-trip.png"
+          alt="Logo Culture Trip"
+          width="165"
+          height="90"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <img
+          src="./images/brands/marriott.png"
+          alt="Logo Marriott"
+          width="101"
+          height="90"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <article class="experience container">
+      <section class="experience-content">
+        <h2>Surprise them with a culinary show in 3D</h2>
+        <p>
+          Le Petit Chef - the smallest chef in the world - presents a
+          sophisticated 3D cinema directly on your plate, combined with
+          excellent gastronomy.
+        </p>
+        <ul>
+          <li>
+            <span>
+              <img
+                src="./icons/check.svg"
+                alt="Check"
+                width="18"
+                height="18"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </span>
+            <span>
+              Fine dining with menu options for vegetarians and kids
+            </span>
+          </li>
+          <li>
+            <img
+              src="./icons/check.svg"
+              alt="Check"
+              width="18"
+              height="18"
+              decoding="async"
+              fetchpriority="high"
+            />
+            <span>
+              Celebrate birthdays, anniversaries, or a memorable night out with
+              family, friends, or a loved one.
+            </span>
+          </li>
+          <li>
+            <img
+              src="./icons/check.svg"
+              alt="Check"
+              width="18"
+              height="18"
+              decoding="async"
+              fetchpriority="high"
+            />
+            <span>
+              Limited seating available—reserve now to secure your spot for this
+              one-of-a-kind dining adventure!
+            </span>
+          </li>
+        </ul>
+      </section>
+      <section class="experience-image">
+        <img
+          src="./images/london-cabaret.png"
+          alt="London Cabaret Club"
+          width="579"
+          height="487"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </section>
+    </article>
+
+    <!-- Banner -->
+    <section class="banner">
+      <div class="container">
+        <h2>Reserve Now for a Unique Dining Experience.</h2>
+        <a href="#">
+          <span>
+            <img
+              src="./icons/gift.svg"
+              alt="Check Availability"
+              width="24"
+              height="24"
+              decoding="async"
+              fetchpriority="low"
+              loading="lazy"
+            />
+          </span>
+          <span>Secure Your Seats</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Social -->
+    <article class="social">
+      <div class="container">
+        <header class="social-description">
+          <h2>Know more about LePetitChef</h2>
+          <p>
+            Before, during and after the meal, the little chef entertains you
+            with various performances and recordings in 3D directly on your
+            plate.
+          </p>
+          <p>
+            When the food is on the table, the show moves into the background
+            and the curtain goes up for international delicacies.
+          </p>
+          <a href="#">
+            <span>
+              <img src="./icons/gift-white.svg" alt="Check Availability"
+              width="24" height=24" decoding="async" fetchpriority="high" />
+            </span>
+            See our gift card options
+          </a>
+          <div class="rating">
+            <div>
+              <img src="./icons/star.svg" alt="Star" width="24" />
+              <img src="./icons/star.svg" alt="Star" width="24" />
+              <img src="./icons/star.svg" alt="Star" width="24" />
+              <img src="./icons/star.svg" alt="Star" width="24" />
+              <img src="./icons/star.svg" alt="Star" width="24" />
+            </div>
+            <p>4.8 out of 5,841 reviews</p>
+          </div>
+        </header>
+        <div>
+          <section class="widget-container">
+            <div class="social-widget">
+              <header>
+                <div>
+                  <img
+                    src="./images/social/logo.png"
+                    alt="Logo"
+                    width="35"
+                    height="35"
+                    decoding="async"
+                    fetchpriority="high"
+                    loading="lazy"
+                  />
+                  <h3>Le Petit Chef</h3>
+                </div>
+                <img
+                  src="./icons/social/settings.svg"
+                  alt="Settings"
+                  width="18"
+                  height="4"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </header>
+              <div class="cover">
+                <img
+                  src="./images/social/image-1.png"
+                  alt="Image 1"
+                  width="375"
+                  height="375"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </div>
+              <footer>
+                <div>
+                  <img
+                    src="./icons/social/heart.svg"
+                    alt="Heart"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                  <img
+                    src="./icons/social/share.svg"
+                    alt="Share"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                  <img
+                    src="./icons/social/comment.svg"
+                    alt="Comment"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                </div>
+                <img
+                  src="./icons/social/marker.svg"
+                  alt="Marker"
+                  width="25"
+                  height="23"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </footer>
+            </div>
+            <div class="social-widget">
+              <header>
+                <div>
+                  <img
+                    src="./images/social/logo.png"
+                    alt="Logo"
+                    width="35"
+                    height="35"
+                    decoding="async"
+                    fetchpriority="high"
+                    loading="lazy"
+                  />
+                  <h3>Le Petit Chef</h3>
+                </div>
+                <img
+                  src="./icons/social/settings.svg"
+                  alt="Settings"
+                  width="18"
+                  height="4"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </header>
+              <div class="cover">
+                <img
+                  src="./images/social/image-2.png"
+                  alt="Image 2"
+                  width="375"
+                  height="393"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </div>
+              <footer>
+                <div>
+                  <img
+                    src="./icons/social/heart.svg"
+                    alt="Heart"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                  <img
+                    src="./icons/social/share.svg"
+                    alt="Share"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                  <img
+                    src="./icons/social/comment.svg"
+                    alt="Comment"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                </div>
+                <img
+                  src="./icons/social/marker.svg"
+                  alt="Marker"
+                  width="25"
+                  height="23"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </footer>
+            </div>
+            <div class="social-widget">
+              <header>
+                <div>
+                  <img
+                    src="./images/social/logo.png"
+                    alt="Logo"
+                    width="35"
+                    height="35"
+                    decoding="async"
+                    fetchpriority="high"
+                    loading="lazy"
+                  />
+                  <h3>Le Petit Chef</h3>
+                </div>
+                <img
+                  src="./icons/social/settings.svg"
+                  alt="Settings"
+                  width="18"
+                  height="4"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </header>
+              <div class="cover">
+                <img
+                  src="./images/social/image-3.png"
+                  alt="Image 3"
+                  width="375"
+                  height="232"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </div>
+              <footer>
+                <div>
+                  <img
+                    src="./icons/social/heart.svg"
+                    alt="Heart"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                  <img
+                    src="./icons/social/share.svg"
+                    alt="Share"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                  <img
+                    src="./icons/social/comment.svg"
+                    alt="Comment"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                </div>
+                <img
+                  src="./icons/social/marker.svg"
+                  alt="Marker"
+                  width="25"
+                  height="23"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </footer>
+            </div>
+            <div class="social-widget">
+              <header>
+                <div>
+                  <img
+                    src="./images/social/logo.png"
+                    alt="Logo"
+                    width="35"
+                    height="35"
+                    decoding="async"
+                    fetchpriority="high"
+                    loading="lazy"
+                  />
+                  <h3>Le Petit Chef</h3>
+                </div>
+                <img
+                  src="./icons/social/settings.svg"
+                  alt="Settings"
+                  width="18"
+                  height="4"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </header>
+              <div class="cover">
+                <img
+                  src="./images/social/image-4.png"
+                  alt="Image 4"
+                  width="375"
+                  height="533"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </div>
+              <footer>
+                <div>
+                  <img
+                    src="./icons/social/heart.svg"
+                    alt="Heart"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                  <img
+                    src="./icons/social/share.svg"
+                    alt="Share"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                  <img
+                    src="./icons/social/comment.svg"
+                    alt="Comment"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                </div>
+                <img
+                  src="./icons/social/marker.svg"
+                  alt="Marker"
+                  width="25"
+                  height="23"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </footer>
+            </div>
+            <div class="social-widget">
+              <header>
+                <div>
+                  <img
+                    src="./images/social/logo.png"
+                    alt="Logo"
+                    width="35"
+                    height="35"
+                    decoding="async"
+                    fetchpriority="high"
+                    loading="lazy"
+                  />
+                  <h3>Le Petit Chef</h3>
+                </div>
+                <img
+                  src="./icons/social/settings.svg"
+                  alt="Settings"
+                  width="18"
+                  height="4"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </header>
+              <div class="cover">
+                <img
+                  src="./images/social/image-5.png"
+                  alt="Image 5"
+                  width="375"
+                  height="535"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </div>
+              <footer>
+                <div>
+                  <img
+                    src="./icons/social/heart.svg"
+                    alt="Heart"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                  <img
+                    src="./icons/social/share.svg"
+                    alt="Share"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                  <img
+                    src="./icons/social/comment.svg"
+                    alt="Comment"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                </div>
+                <img
+                  src="./icons/social/marker.svg"
+                  alt="Marker"
+                  width="25"
+                  height="23"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </footer>
+            </div>
+            <div class="social-widget">
+              <header>
+                <div>
+                  <img
+                    src="./images/social/logo.png"
+                    alt="Logo"
+                    width="35"
+                    height="35"
+                    decoding="async"
+                    fetchpriority="high"
+                    loading="lazy"
+                  />
+                  <h3>Le Petit Chef</h3>
+                </div>
+                <img
+                  src="./icons/social/settings.svg"
+                  alt="Settings"
+                  width="18"
+                  height="4"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </header>
+              <div class="cover">
+                <img
+                  src="./images/social/image-6.png"
+                  alt="Image 6"
+                  width="375"
+                  height="232"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </div>
+              <footer>
+                <div>
+                  <img
+                    src="./icons/social/heart.svg"
+                    alt="Heart"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                  <img
+                    src="./icons/social/share.svg"
+                    alt="Share"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                  <img
+                    src="./icons/social/comment.svg"
+                    alt="Comment"
+                    width="25"
+                    height="23"
+                    decoding="async"
+                    fetchpriority="low"
+                    loading="lazy"
+                  />
+                </div>
+                <img
+                  src="./icons/social/marker.svg"
+                  alt="Marker"
+                  width="25"
+                  height="23"
+                  decoding="async"
+                  fetchpriority="low"
+                  loading="lazy"
+                />
+              </footer>
+            </div>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <!-- Testimonials -->
+    <article class="testimonials">
+      <div class="container">
+        <div>
+          <section class="testimonial">
+            <div class="user">
+              <header>
+                <h3>Erin Smith</h3>
+                <p>A Week Ago</p>
+              </header>
+              <img
+                src="./icons/google.png"
+                alt="Google"
+                width="20"
+                height="20"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+            </div>
+            <div class="rating">
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+            </div>
+            <p>
+              This was such an amazing experience, the staff were exceptional.
+              Highly recommended
+            </p>
+          </section>
+          <section class="testimonial">
+            <div class="user">
+              <header>
+                <h3>Kimberly Hiller</h3>
+                <p>3 Months Ago</p>
+              </header>
+              <img
+                src="./icons/google.png"
+                alt="Google"
+                width="20"
+                height="20"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+            </div>
+            <div class="rating">
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+            </div>
+            <p>
+              I saw many advertisements and it did not disappoint! It’s a great
+              experience and everyone should do it once
+            </p>
+          </section>
+          <section class="testimonial">
+            <div class="user">
+              <header>
+                <h3>Tien Ryan</h3>
+                <p>A Month Ago</p>
+              </header>
+              <img
+                src="./icons/google.png"
+                alt="Google"
+                width="20"
+                height="20"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+            </div>
+            <div class="rating">
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+              <img
+                src="./icons/star.svg"
+                alt="Star"
+                width="21"
+                height="21"
+                decoding="async"
+                fetchpriority="low"
+                loading="lazy"
+              />
+            </div>
+            <p>
+              The show was fun. Very much enjoyed the food. Very filling.
+              Service and host of the show was wonderful.
+            </p>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <!-- FAQ -->
+    <article class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <section>
+            <details>
+              <summary>How does the voucher work?</summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, itaque adipisci earum quo ex placeat commodi sed
+                sint saepe! Tenetur id ipsum quo aspernatur delectus asperiores
+                possimus quos ea nisi.
+              </p>
+            </details>
+          </section>
+          <section>
+            <details>
+              <summary>Where are vouchers shipped to?</summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, itaque adipisci earum quo ex placeat commodi sed
+                sint saepe! Tenetur id ipsum quo aspernatur delectus asperiores
+                possimus quos ea nisi.
+              </p>
+            </details>
+          </section>
+          <section>
+            <details>
+              <summary>How long does shipping take?</summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, itaque adipisci earum quo ex placeat commodi sed
+                sint saepe! Tenetur id ipsum quo aspernatur delectus asperiores
+                possimus quos ea nisi.
+              </p>
+            </details>
+          </section>
+          <section>
+            <details>
+              <summary>Do vouchers expire?</summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, itaque adipisci earum quo ex placeat commodi sed
+                sint saepe! Tenetur id ipsum quo aspernatur delectus asperiores
+                possimus quos ea nisi.
+              </p>
+            </details>
+          </section>
+          <section>
+            <details>
+              <summary>
+                In which restaurants are the vouchers applicable?
+              </summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, itaque adipisci earum quo ex placeat commodi sed
+                sint saepe! Tenetur id ipsum quo aspernatur delectus asperiores
+                possimus quos ea nisi.
+              </p>
+            </details>
+          </section>
+          <section>
+            <details>
+              <summary>How can I gift a physical voucher?</summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, itaque adipisci earum quo ex placeat commodi sed
+                sint saepe! Tenetur id ipsum quo aspernatur delectus asperiores
+                possimus quos ea nisi.
+              </p>
+            </details>
+          </section>
+          <section>
+            <details>
+              <summary>
+                If I want to self print the voucher. Which email address should
+                I send the voucher to?
+              </summary>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, itaque adipisci earum quo ex placeat commodi sed
+                sint saepe! Tenetur id ipsum quo aspernatur delectus asperiores
+                possimus quos ea nisi.
+              </p>
+            </details>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="gift">
+      <h2>Want to make the give the best gift?</h2>
+      <p>
+        The most fun and quirky culinary show for celebrating birthdays,
+        milestones, or special occasions.
+      </p>
+      <a class="button" href="#">Explore our Gift Cards</a>
+      <a class="link" href="#">Prefer to book? Click here!</a>
+    </footer>
+  </body>
+</html>
