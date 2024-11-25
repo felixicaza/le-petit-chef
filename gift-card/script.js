@@ -1,149 +1,137 @@
-// Gift elements
-const giftContainer = document.querySelector(".desktop .gift-container");
-const giftCards = document.querySelector(".desktop .gift-cards");
+// Elements
+const elements = {
+  // Gift elements
+  giftContainer: document.querySelector(".desktop .gift-container"),
+  giftCards: document.querySelector(".desktop .gift-cards"),
 
-// Step elements
-const stepOne = document.querySelector(".desktop .step-one");
-const stepTwo = document.querySelector(".desktop .step-two");
-const stepThree = document.querySelector(".desktop .step-three");
-const stepFour = document.querySelector(".desktop .step-four");
-const stepFive = document.querySelector(".desktop .step-five");
+  // Step elements
+  steps: {
+    one: document.querySelector(".desktop .step-one"),
+    two: document.querySelector(".desktop .step-two"),
+    three: document.querySelector(".desktop .step-three"),
+    four: document.querySelector(".desktop .step-four"),
+    five: document.querySelector(".desktop .step-five"),
+  },
 
-// Delivery elements
-const deliveryContainer = document.querySelector(
-  ".desktop .delivery-container"
-);
-const deliveryBackButton = document.querySelector(".desktop .delivery-back");
-const deliveryButtons = document.querySelectorAll(".desktop .delivery");
+  // Delivery elements
+  delivery: {
+    container: document.querySelector(".desktop .delivery-container"),
+    backButton: document.querySelector(".desktop .delivery-back"),
+    buttons: document.querySelectorAll(".desktop .delivery"),
+  },
 
-// Amount elements
-const amount = document.querySelector(".desktop .amount");
-const amoutnBackButton = document.querySelector(".desktop .amount-back");
-const priceButtons = document.querySelector(".desktop .default-amounts");
+  // Amount elements
+  amount: {
+    container: document.querySelector(".desktop .amount"),
+    backButton: document.querySelector(".desktop .amount-back"),
+    buttons: document.querySelector(".desktop .default-amounts"),
+  },
 
-// Card 3D elements
-const card3D = document.querySelector(".desktop .card-3d");
-const card3DBackButton = document.querySelector(".desktop .card-3d-back");
-const card3DButtons = document.querySelector(".desktop .card-3d-container");
+  // Card 3D elements
+  card3D: {
+    container: document.querySelector(".desktop .card-3d"),
+    backButton: document.querySelector(".desktop .card-3d-back"),
+    buttons: document.querySelector(".desktop .card-3d-container"),
+  },
 
-// Toy elements
-const toyContainer = document.querySelector(".desktop .toy");
-const toyBackButton = document.querySelector(".desktop .toy-back");
-const toyButtons = document.querySelector(".desktop .toy-buttons");
+  // Toy elements
+  toy: {
+    container: document.querySelector(".desktop .toy"),
+    backButton: document.querySelector(".desktop .toy-back"),
+    buttons: document.querySelector(".desktop .toy-buttons"),
+  },
+};
 
-// Gift elements logic
-giftCards.addEventListener("click", (event) => {
+const handleActiveSelection = (container, selector, clickedElement) => {
+  const activeElement = container.querySelector(selector + ".active");
+  if (activeElement) activeElement.classList.remove("active");
+  if (clickedElement) clickedElement.classList.add("active");
+};
+
+// Gift logic
+elements.giftCards.addEventListener("click", (event) => {
   const clickedCard = event.target.closest(".gift");
-
   if (!clickedCard) return;
 
-  const activeCard = giftCards.querySelector(".gift.active");
-
-  if (activeCard) {
-    activeCard.classList.remove("active");
-  }
-
-  clickedCard.classList.add("active");
-  stepOne.classList.add("active");
-  stepTwo.classList.add("marked");
-  deliveryContainer.classList.add("active");
-  giftContainer.classList.add("hide");
+  handleActiveSelection(elements.giftCards, ".gift", clickedCard);
+  elements.steps.one.classList.add("active");
+  elements.steps.two.classList.add("marked");
+  elements.delivery.container.classList.add("active");
+  elements.giftContainer.classList.add("hide");
 });
 
-// Delivery elements logic
-deliveryBackButton.addEventListener("click", () => {
-  stepOne.classList.remove("active");
-  stepTwo.classList.remove("marked");
-  giftContainer.classList.remove("hide");
-  deliveryContainer.classList.remove("active");
+// Delivery logic
+elements.delivery.backButton.addEventListener("click", () => {
+  elements.steps.one.classList.remove("active");
+  elements.steps.two.classList.remove("marked");
+  elements.giftContainer.classList.remove("hide");
+  elements.delivery.container.classList.remove("active");
 });
 
-deliveryButtons.forEach((button) => {
+elements.delivery.buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    deliveryButtons.forEach((button) => {
-      button.classList.remove("active");
-    });
+    handleActiveSelection(elements.delivery.container, ".delivery", button);
 
-    stepTwo.classList.replace("marked", "active");
-    stepThree.classList.add("marked");
-    stepFour.classList.remove("hide");
-    stepFive.classList.remove("hide");
-    button.classList.add("active");
-    amount.classList.remove("hide");
-    deliveryContainer.classList.remove("active");
+    elements.steps.two.classList.replace("marked", "active");
+    elements.steps.three.classList.add("marked");
+    elements.steps.four.classList.remove("hide");
+    elements.steps.five.classList.remove("hide");
+    elements.amount.container.classList.remove("hide");
+    elements.delivery.container.classList.remove("active");
   });
 });
 
-// Amount elements logic
-amoutnBackButton.addEventListener("click", () => {
-  stepTwo.classList.replace("active", "marked");
-  stepThree.classList.remove("marked");
-  stepFour.classList.add("hide");
-  stepFive.classList.add("hide");
-  amount.classList.add("hide");
-  deliveryContainer.classList.add("active");
+// Amount logic
+elements.amount.backButton.addEventListener("click", () => {
+  elements.steps.two.classList.replace("active", "marked");
+  elements.steps.three.classList.remove("marked");
+  elements.steps.four.classList.add("hide");
+  elements.steps.five.classList.add("hide");
+  elements.amount.container.classList.add("hide");
+  elements.delivery.container.classList.add("active");
 });
 
-priceButtons.addEventListener("click", (event) => {
+elements.amount.buttons.addEventListener("click", (event) => {
   const clickedCard = event.target.closest(".price");
-
   if (!clickedCard) return;
 
-  const activeCard = priceButtons.querySelector(".price.active");
+  handleActiveSelection(elements.amount.buttons, ".price", clickedCard);
 
-  if (activeCard) {
-    activeCard.classList.remove("active");
-  }
-
-  stepThree.classList.replace("marked", "active");
-  stepFour.classList.add("marked");
-  clickedCard.classList.add("active");
-  card3D.classList.remove("hide");
-  amount.classList.add("hide");
+  elements.steps.three.classList.replace("marked", "active");
+  elements.steps.four.classList.add("marked");
+  elements.card3D.container.classList.remove("hide");
+  elements.amount.container.classList.add("hide");
 });
 
-// Card 3D elements logic
-card3DBackButton.addEventListener("click", () => {
-  stepThree.classList.replace("active", "marked");
-  stepFour.classList.remove("marked");
-  card3D.classList.add("hide");
-  amount.classList.remove("hide");
+// Card 3D logic
+elements.card3D.backButton.addEventListener("click", () => {
+  elements.steps.three.classList.replace("active", "marked");
+  elements.steps.four.classList.remove("marked");
+  elements.card3D.container.classList.add("hide");
+  elements.amount.container.classList.remove("hide");
 });
 
-card3DButtons.addEventListener("click", (event) => {
+elements.card3D.buttons.addEventListener("click", (event) => {
   const clickedCard = event.target.closest(".gift-3d");
-
   if (!clickedCard) return;
 
-  const activeCard = card3DButtons.querySelector(".gift-3d.active");
+  handleActiveSelection(elements.card3D.buttons, ".gift-3d", clickedCard);
 
-  if (activeCard) {
-    activeCard.classList.remove("active");
-  }
-
-  stepFour.classList.replace("marked", "active");
-  clickedCard.classList.add("active");
-  toyContainer.classList.remove("hide");
-  card3D.classList.add("hide");
+  elements.steps.four.classList.replace("marked", "active");
+  elements.toy.container.classList.remove("hide");
+  elements.card3D.container.classList.add("hide");
 });
 
-// Toy elements logic
-toyBackButton.addEventListener("click", () => {
-  stepFour.classList.replace("active", "marked");
-  toyContainer.classList.add("hide");
-  card3D.classList.remove("hide");
+// Toy logic
+elements.toy.backButton.addEventListener("click", () => {
+  elements.steps.four.classList.replace("active", "marked");
+  elements.toy.container.classList.add("hide");
+  elements.card3D.container.classList.remove("hide");
 });
 
-toyButtons.addEventListener("click", (event) => {
+elements.toy.buttons.addEventListener("click", (event) => {
   const clickedCard = event.target.closest(".toy-gift");
-
   if (!clickedCard) return;
 
-  const activeCard = toyButtons.querySelector(".toy-gift.active");
-
-  if (activeCard) {
-    activeCard.classList.remove("active");
-  }
-
-  clickedCard.classList.add("active");
+  handleActiveSelection(elements.toy.buttons, ".toy-gift", clickedCard);
 });
