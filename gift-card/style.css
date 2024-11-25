@@ -202,6 +202,10 @@ body {
         box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.15);
         transition: border-color 300ms ease;
 
+        &.active {
+          border-color: var(--primary-color);
+        }
+
         &:hover {
           border-color: var(--primary-color);
         }
@@ -306,6 +310,7 @@ body {
       grid-template-columns: 1fr 1fr;
       gap: 24px;
       padding-bottom: 60px;
+      align-items: start;
 
       > article {
         display: flex;
@@ -396,7 +401,7 @@ body {
         }
       }
 
-      .gift {
+      .steps-container {
         background: rgba(255, 255, 255, 0.88);
         border-radius: 26px;
         padding: 20px;
@@ -408,6 +413,47 @@ body {
           display: flex;
           justify-content: space-between;
           align-items: center;
+
+          .step-one {
+            background: #fed9cd;
+          }
+
+          :is(
+              .step-one,
+              .step-two,
+              .step-three,
+              .step-four,
+              .step-five
+            ).marked {
+            background: #fed9cd;
+          }
+
+          :is(
+              .step-one,
+              .step-two,
+              .step-three,
+              .step-four,
+              .step-five
+            ).active {
+            background: var(--primary-color);
+            color: #fff;
+
+            p {
+              display: none;
+            }
+
+            .check {
+              display: initial;
+            }
+          }
+
+          :is(.step-four, .step-five).hide {
+            display: none;
+          }
+
+          .check {
+            display: none;
+          }
 
           div {
             --size: 48px;
@@ -428,12 +474,77 @@ body {
           font-size: 26px;
         }
 
-        .gift-cards {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 10px;
+        .gift-container {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
 
-          .gift {
+          &.hide {
+            display: none;
+          }
+
+          .gift-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+
+            &.hide {
+              display: none;
+            }
+
+            .gift {
+              cursor: pointer;
+              background-color: #fff;
+              border-radius: 11px;
+              border-style: solid;
+              border-color: transparent;
+              padding: 12px 15px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 20px;
+              font-size: 18px;
+              box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.15);
+              transition: border-color 300ms ease;
+
+              .cover {
+                position: relative;
+
+                .gift-check {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  translate: 15px;
+                  opacity: 0;
+                  transition: opacity 300ms ease;
+                }
+              }
+
+              &.active {
+                border-color: var(--primary-color);
+
+                .gift-check {
+                  opacity: 1;
+                }
+              }
+
+              &:hover {
+                border-color: var(--primary-color);
+              }
+            }
+          }
+        }
+
+        .delivery-container {
+          display: none;
+
+          &.active {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+          }
+
+          .delivery {
             cursor: pointer;
             background-color: #fff;
             border-radius: 11px;
@@ -447,9 +558,424 @@ body {
             font-size: 18px;
             box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.15);
             transition: border-color 300ms ease;
+            position: relative;
+            min-height: 200px;
+            display: grid;
+            place-items: center;
+
+            &.active {
+              border-color: var(--primary-color);
+
+              .delivery-check {
+                opacity: 1;
+              }
+            }
+
+            .delivery-check {
+              position: absolute;
+              top: 0;
+              right: 0;
+              translate: -15px 15px;
+              opacity: 0;
+              transition: opacity 300ms ease;
+            }
 
             &:hover {
               border-color: var(--primary-color);
+            }
+          }
+
+          .delivery-back {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            background: #8c8c8c;
+            border: none;
+            color: #fff;
+            padding: 16px 32px;
+            width: fit-content;
+            font-weight: 600;
+            transition: background 300ms ease;
+
+            &:hover {
+              background: #616161;
+            }
+          }
+        }
+
+        .amount {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+
+          &.hide {
+            display: none;
+          }
+
+          .amounts-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .default-amounts {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+              gap: 10px;
+
+              button {
+                cursor: pointer;
+                background-color: #fff;
+                border-radius: 11px;
+                border-style: solid;
+                border-color: transparent;
+                padding: 12px 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                font-size: 25px;
+                font-weight: 500;
+                box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.15);
+                transition: border-color 300ms ease;
+                position: relative;
+                min-height: 120px;
+                display: grid;
+                place-items: center;
+
+                .amount-check {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  translate: -15px 15px;
+                  opacity: 0;
+                  transition: opacity 300ms ease;
+                }
+
+                .popular {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 15px;
+
+                  .label {
+                    font-size: 12px;
+                    color: var(--primary-color);
+                  }
+                }
+
+                &.active {
+                  border-color: var(--primary-color);
+
+                  .amount-check {
+                    opacity: 1;
+                  }
+                }
+
+                &:hover {
+                  border-color: var(--primary-color);
+                }
+              }
+            }
+
+            .custom-amount {
+              background-color: #fff;
+              border-radius: 11px;
+              padding: 12px 15px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
+              font-size: 25px;
+              font-weight: 500;
+              box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.15);
+
+              input {
+                border-color: transparent;
+                text-align: center;
+                font-size: 25px;
+              }
+            }
+          }
+
+          .amount-back {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            background: #8c8c8c;
+            border: none;
+            color: #fff;
+            padding: 16px 32px;
+            width: fit-content;
+            font-weight: 600;
+            transition: background 300ms ease;
+
+            &:hover {
+              background: #616161;
+            }
+          }
+        }
+
+        .card-3d {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          text-align: center;
+
+          &.hide {
+            display: none;
+          }
+
+          .cards-3d-gift {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .card-3d-container {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 24px 12px;
+
+              .gift-3d {
+                cursor: pointer;
+                background-color: #fff;
+                border-radius: 11px;
+                border-style: solid;
+                border-color: transparent;
+                padding: 12px 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                font-size: 18px;
+                box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.15);
+                transition: border-color 300ms ease;
+
+                .cover {
+                  position: relative;
+
+                  .card-3d-check {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    translate: -15px 15px;
+                    opacity: 0;
+                    transition: opacity 300ms ease;
+                  }
+                }
+
+                .free-label {
+                  color: var(--primary-color);
+                }
+
+                &.active {
+                  border-color: var(--primary-color);
+
+                  .card-3d-check {
+                    opacity: 1;
+                  }
+                }
+
+                &:hover {
+                  border-color: var(--primary-color);
+                }
+              }
+            }
+
+            .solo-gift-3d {
+              cursor: pointer;
+              background-color: #fff;
+              border-radius: 11px;
+              border-style: solid;
+              border-color: transparent;
+              padding: 12px 15px;
+              font-size: 18px;
+              box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.15);
+              transition: border-color 300ms ease;
+              min-height: 100px;
+              display: grid;
+              place-items: center;
+
+              &.active {
+                border-color: var(--primary-color);
+
+                .card-3d-check {
+                  opacity: 1;
+                }
+              }
+
+              &:hover {
+                border-color: var(--primary-color);
+              }
+            }
+          }
+
+          .card-3d-back {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            background: #8c8c8c;
+            border: none;
+            color: #fff;
+            padding: 16px 32px;
+            width: fit-content;
+            font-weight: 600;
+            transition: background 300ms ease;
+
+            &:hover {
+              background: #616161;
+            }
+          }
+        }
+
+        .toy {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          text-align: center;
+
+          &.hide {
+            display: none;
+          }
+
+          header {
+            span {
+              color: var(--primary-color);
+              font-weight: bold;
+
+              span {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .toys-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .toy-buttons {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+
+              .toy-gift {
+                cursor: pointer;
+                background-color: #fff;
+                border-radius: 11px;
+                border-style: solid;
+                border-color: transparent;
+                padding: 12px 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                font-size: 18px;
+                box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.15);
+                transition: border-color 300ms ease;
+                position: relative;
+                min-height: 120px;
+                display: grid;
+                place-items: center;
+
+                &.active {
+                  border-color: var(--primary-color);
+
+                  .toy-check {
+                    opacity: 1;
+                  }
+                }
+
+                .toy-check {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  translate: -15px 15px;
+                  opacity: 0;
+                  transition: opacity 300ms ease;
+                }
+
+                &:hover {
+                  border-color: var(--primary-color);
+                }
+              }
+            }
+          }
+
+          .terms {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            label {
+              position: relative;
+              cursor: pointer;
+
+              input {
+                --size: 18px;
+
+                width: var(--size);
+                height: var(--size);
+                position: absolute;
+                inset: 0;
+                opacity: 0;
+
+                &:checked + svg {
+                  color: var(--primary-color);
+                }
+              }
+
+              svg {
+                translate: 0 3px;
+              }
+            }
+
+            a {
+              color: var(--primary-color);
+              text-decoration: none;
+            }
+          }
+
+          .buttons-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .toy-back {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              cursor: pointer;
+              background: #8c8c8c;
+              border: none;
+              color: #fff;
+              padding: 16px 32px;
+              width: fit-content;
+              font-weight: 600;
+              transition: background 300ms ease;
+
+              &:hover {
+                background: #616161;
+              }
+            }
+
+            .payment {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              cursor: pointer;
+              background: var(--primary-color);
+              text-decoration: none;
+              border: none;
+              color: #fff;
+              padding: 16px 32px;
+              width: fit-content;
+              font-weight: 600;
+              transition: background 300ms ease;
+
+              &:hover {
+                background: var(--primary-color-button-hover);
+              }
             }
           }
         }
