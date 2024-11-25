@@ -237,6 +237,9 @@ body {
   content-visibility: hidden;
 
   @media (width >= 992px) {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     display: block;
     content-visibility: auto;
     background-color: var(--primary-color);
@@ -310,7 +313,7 @@ body {
       grid-template-columns: 1fr 1fr;
       gap: 24px;
       padding-bottom: 60px;
-      align-items: start;
+      align-items: center;
 
       > article {
         display: flex;
@@ -352,51 +355,16 @@ body {
           }
         }
 
-        footer {
+        ul {
           display: flex;
           flex-direction: column;
           gap: 10px;
 
-          h2 {
-            color: var(--primary-color);
-            font-size: 34px;
-          }
-
-          p {
-            font-size: 24px;
-            color: #fff;
-          }
-
-          .time-container {
+          li {
             display: flex;
             align-items: center;
-            gap: 20px;
-
-            .time {
-              font-size: 104px;
-            }
-          }
-
-          .cards {
-            display: flex;
             gap: 10px;
-
-            .card {
-              max-width: 160px;
-              background-color: #fff;
-              border-radius: 11px;
-              display: flex;
-              flex-direction: column;
-              gap: 10px;
-              text-align: center;
-              align-items: center;
-              padding: 10px;
-
-              p {
-                color: initial;
-                font-size: initial;
-              }
-            }
+            color: #fff;
           }
         }
       }
@@ -509,6 +477,8 @@ body {
 
               .cover {
                 position: relative;
+                object-fit: cover;
+                object-position: center;
 
                 .gift-check {
                   position: absolute;
@@ -995,6 +965,8 @@ body {
 
     img {
       scroll-snap-align: center;
+      filter: grayscale(100%);
+      opacity: 0.6;
     }
 
     @media (width >= 1200px) {
@@ -1278,6 +1250,16 @@ body {
     display: flex;
     flex-direction: column;
     gap: 42px;
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+
+      @media (width >= 768px) {
+        font-size: 36px;
+      }
+    }
 
     div:has(> .testimonial) {
       display: flex;
