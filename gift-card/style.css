@@ -978,6 +978,7 @@ body {
 
   .experience-image {
     video {
+      aspect-ratio: 579/487;
       width: 100%;
       height: auto;
     }
