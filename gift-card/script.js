@@ -1,44 +1,44 @@
 // Elements
 const elements = {
   // Gift elements
-  giftContainer: document.querySelector(".desktop .gift-container"),
-  giftCards: document.querySelector(".desktop .gift-cards"),
+  giftContainer: document.querySelector(".gift-container"),
+  giftCards: document.querySelector(".gift-cards"),
 
   // Step elements
   steps: {
-    one: document.querySelector(".desktop .step-one"),
-    two: document.querySelector(".desktop .step-two"),
-    three: document.querySelector(".desktop .step-three"),
-    four: document.querySelector(".desktop .step-four"),
-    five: document.querySelector(".desktop .step-five"),
+    one: document.querySelector(".step-one"),
+    two: document.querySelector(".step-two"),
+    three: document.querySelector(".step-three"),
+    four: document.querySelector(".step-four"),
+    five: document.querySelector(".step-five"),
   },
 
   // Delivery elements
   delivery: {
-    container: document.querySelector(".desktop .delivery-container"),
-    backButton: document.querySelector(".desktop .delivery-back"),
-    buttons: document.querySelectorAll(".desktop .delivery"),
+    container: document.querySelector(".delivery-container"),
+    backButton: document.querySelector(".delivery-back"),
+    buttons: document.querySelectorAll(".delivery"),
   },
 
   // Amount elements
   amount: {
-    container: document.querySelector(".desktop .amount"),
-    backButton: document.querySelector(".desktop .amount-back"),
-    buttons: document.querySelector(".desktop .default-amounts"),
+    container: document.querySelector(".amount"),
+    backButton: document.querySelector(".amount-back"),
+    buttons: document.querySelector(".default-amounts"),
   },
 
   // Card 3D elements
   card3D: {
-    container: document.querySelector(".desktop .card-3d"),
-    backButton: document.querySelector(".desktop .card-3d-back"),
-    buttons: document.querySelector(".desktop .card-3d-container"),
+    container: document.querySelector(".card-3d"),
+    backButton: document.querySelector(".card-3d-back"),
+    buttons: document.querySelector(".card-3d-container"),
   },
 
   // Toy elements
   toy: {
-    container: document.querySelector(".desktop .toy"),
-    backButton: document.querySelector(".desktop .toy-back"),
-    buttons: document.querySelector(".desktop .toy-buttons"),
+    container: document.querySelector(".toy"),
+    backButton: document.querySelector(".toy-back"),
+    buttons: document.querySelector(".toy-buttons"),
   },
 };
 
