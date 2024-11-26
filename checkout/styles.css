@@ -98,10 +98,32 @@ h2.title small {
   font-weight: 300;
 }
 
-a.link-text {
+.link-text {
+  font-size: inherit;
+  background: transparent;
+  border: none;
+  cursor: pointer;
   color: #ee6d44;
   font-weight: bold;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.link-text ~ input {
+  width: 100%;
+  padding: 10px 6px;
+  margin-top: 8px;
+  border-radius: 4px;
+  border-color: #ddd;
+  border-style: solid;
+  display: none;
+
+  &.show {
+    display: block;
+  }
 }
 
 .btn {
