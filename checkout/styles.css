@@ -389,14 +389,27 @@ header h1 {
 .calendar-days .calendar-days-soldout {
   color: #000;
   background-color: #fad3d4;
+  cursor: default;
 }
 .calendar-days .calendar-days-free {
   color: #557d27;
   background-color: #e5eeda;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #7bac43;
+    color: #fff;
+  }
 }
 .calendar-days .calendar-days-fewseats {
   color: #000;
   background-color: #fef0e0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #ffe1be;
+    color: #ee6d44;
+  }
 }
 
 .header-date {
@@ -462,20 +475,28 @@ header h1 {
   transition: background-color 0.3s ease;
   height: 65px;
 }
-.time-slot .available {
+.time-slot.available {
   color: #557d27;
   background-color: #e5eeda;
-  outline-color: #557d27;
-}
-.time-slot .available:hover {
-  background-color: #557d27;
-  color: #fff;
+  outline-color: #7bac43;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #7bac43;
+    color: #fff;
+  }
 }
 
-.few-seats {
+.time-slot.few-seats {
   color: #000;
   background-color: #fef0e0;
   outline-color: #fbc383;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #ffe1be;
+    color: #ee6d44;
+  }
 }
 
 .select-menu {
@@ -853,5 +874,3 @@ header h1 {
   color: gray;
   font-size: 14px;
 }
-
-/*# sourceMappingURL=styles.css.map */
