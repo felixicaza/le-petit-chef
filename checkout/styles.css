@@ -352,7 +352,9 @@ header h1 {
   text-decoration: none;
 }
 .calendar-days .calendar-days-item {
-  border: 1px solid #ddd;
+  outline: 1px solid #ddd;
+  border: solid #fff;
+  border-width: 2px 3px 3px 2px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -387,17 +389,14 @@ header h1 {
 .calendar-days .calendar-days-soldout {
   color: #000;
   background-color: #fad3d4;
-  border-color: #ef8085;
 }
 .calendar-days .calendar-days-free {
   color: #557d27;
   background-color: #e5eeda;
-  border-color: #557d27;
 }
 .calendar-days .calendar-days-fewseats {
   color: #000;
   background-color: #fef0e0;
-  border-color: #fbc383;
 }
 
 .header-date {
@@ -665,9 +664,15 @@ header h1 {
 }
 .submenu-info {
   display: flex;
+  flex-direction: column;
   text-align: left;
   gap: 2rem;
   max-width: 52rem;
+}
+@media screen and (min-width: 768px) {
+  .submenu-info {
+    flex-direction: row;
+  }
 }
 .submenu-terms {
   color: #8c8c8c;
