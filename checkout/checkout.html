@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - Le Petit Chef</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-brand">
+          <a href="">
+            <img src="images/IconLeft.png" alt="" />
+          </a>
+          <a href="index.html">
+            <img
+              src="images/Logo + Back.png"
+              alt="Le Petit Chef Logo"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="header-user">
+          <p>Grand Hyatt Manila</p>
+          <img src="images/flat.png" alt="icon flat" />
+        </div>
+      </header>
+
+      <div class="header-date">
+        <p><strong>Selected Date</strong> Friday, 12th May 2024</p>
+        <p><strong>Number of Guest</strong> 2</p>
+      </div>
+
+      <div class="step-indicator">
+        <div class="step">
+          <div class="circle check">
+            <img src="images/iconCheck.png" alt="icon check" />
+          </div>
+        </div>
+        <a href="select-menu.html" class="step">
+          <div class="circle check">
+            <img src="images/iconCheck.png" alt="icon check" />
+          </div>
+        </a>
+        <div class="step">
+          <div class="circle completed">
+            <img src="images/iconCutlery.png" alt="icon cutlery" />
+          </div>
+        </div>
+        <div class="step">
+          <div class="circle">
+            <img src="images/iconCreditCard.png" alt="icon credit card" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Selections -->
+      <section class="select-menu">
+        <h2 class="title">
+          <span
+            >Additional Selections For Your Menu <small>(Optional)</small></span
+          >
+        </h2>
+
+        <div class="menu-item menu-item_single">
+          <div class="menu-info">
+            <p>Anniversary Cake <span>(for 2 People)</span></p>
+          </div>
+          <div class="menu-controls">
+            <div class="counter">
+              <button class="btn-minus">-</button>
+              <input type="text" value="0" />
+              <button class="btn-plus">+</button>
+            </div>
+            <span>PHP 2,500</span>
+          </div>
+        </div>
+
+        <div class="menu-item menu-item_single">
+          <div class="menu-info">
+            <p>Birthday Cake <span>(for 2 People)</span></p>
+          </div>
+          <div class="menu-controls">
+            <div class="counter">
+              <button class="btn-minus">-</button>
+              <input type="text" value="0" />
+              <button class="btn-plus">+</button>
+            </div>
+            <span>PHP 5,500</span>
+          </div>
+        </div>
+
+        <div class="menu-item menu-item_single">
+          <div class="menu-info">
+            <p>Bottle of Brut Imperial, Moët et Chandon</p>
+          </div>
+          <div class="menu-controls">
+            <div class="counter">
+              <button class="btn-minus">-</button>
+              <input type="text" value="0" />
+              <button class="btn-plus">+</button>
+            </div>
+            <span>PHP 1,500</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-info">
+            <p>Wine Package</p>
+          </div>
+          <div class="menu-controls">
+            <div class="counter">
+              <button class="btn-minus">-</button>
+              <input type="text" value="0" />
+              <button class="btn-plus">+</button>
+            </div>
+            <span>PHP 2,500</span>
+          </div>
+          <a class="btn-what-includes" href="#">What Includes</a>
+        </div>
+
+        <div class="remarks-section">
+          <label for="remarks">Menu / Allergy / Booking Remark</label>
+          <textarea
+            id="remarks"
+            placeholder="Maximum 200 Characters"
+          ></textarea>
+        </div>
+      </section>
+
+      <!-- Checkout -->
+      <div class="order-summary">
+        <h3>Your Order</h3>
+        <div class="order-item">
+          <p>
+            One package for two (2) persons - GRAND SUITE Stay & Dine Package
+          </p>
+          <p>1</p>
+        </div>
+        <div class="order-item">
+          <p>Anniversary Cake (for 2 People)</p>
+          <p>1</p>
+        </div>
+        <div class="order-item">
+          <p>Wine Package</p>
+          <p>1</p>
+        </div>
+
+        <footer>
+          <div class="order-item">
+            <p class="d-none sm-block">
+              Make the reservation paying PHP 1.000 per guest
+            </p>
+            <p>
+              <strong>Deposit <small>(2 Guests)</small> PHP 2.000</strong>
+            </p>
+          </div>
+        </footer>
+
+        <p class="voucher">
+          Discount Code or Giftvoucher?
+          <a class="link-text" href="#">Click Here</a>
+        </p>
+      </div>
+
+      <!-- Nav Footer -->
+      <div class="footer-nav">
+        <a href="select-menu.html" class="btn btn-back"><span>Back</span></a>
+        <a href="#" class="btn btn-pay">Proceed to Payment</a>
+      </div>
+
+      <p class="other-people">
+        Other X people are looking to book on this date
+      </p>
+
+      <!-- Terms & Conditions 
+        <div class="terms">
+            <h2 class="title light">Terms & Conditions</h2>
+            <div class="terms-list">
+                <ul>
+                    <li>Reservation must only be made through https://lepetitchef.com/grand-hyatt-manila to guarantee the seat. For inquiries, call +632 8838 1234 or email manila.grand@hyatt.com.</li>
+                    <li>Once the booking is made, a deposit of PHP 1,000 net per person must be settled through the online reservation platform to guarantee the seat/booking.</li>
+                    <li>Once the deposit is paid, a representative from Grand Hyatt Manila will contact the guest to finalize the booking and secure the full pre-payment using a separate ipay88 payment link and shall provide the confirmation letter to complete the final reservation.e booking is made, a deposit of PHP 1,000 net per person must be settled through the online reservation platform to guarantee the seat/booking.</li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+    <!-- END: container -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

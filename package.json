@@ -3,6 +3,7 @@
   "license": "ISC",
   "author": "Felix Icaza",
   "scripts": {
+    "checkout": "pnpx servor ./checkout --reload",
     "gift": "pnpx servor ./gift-card --reload",
     "location": "pnpx servor ./location --reload"
   }

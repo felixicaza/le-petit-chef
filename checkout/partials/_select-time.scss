@@ -1,0 +1,81 @@
+.header-date {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 1.5rem 0;
+
+    p {
+        margin: .5rem 0;
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    strong {
+        margin-right: .5rem;
+    }
+}
+
+.time-grid {
+
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    a { text-decoration: none;}
+
+    &-title {
+        text-align: left;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 2rem 0;
+
+        @media screen and (min-width: 768px) {
+            font-size: 24px;
+        }
+
+        &::after {
+            content: " ";
+            border-bottom: 1px solid #000;
+            display: block;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.time-slot {
+    display: flex;
+    color: #557D27;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid #dedede;
+    padding: 10px;
+    background-color: #e0f7e0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    height: 65px;
+
+    .available {
+        color: #557D27;
+        background-color: #E5EEDA;
+        outline-color: #557D27;
+
+        &:hover {
+            background-color: #557D27;
+            color: #fff;
+        }
+    }
+}
+
+.few-seats {
+    color: #000;
+    background-color: #FEF0E0;
+    outline-color: #FBC383; 
+}

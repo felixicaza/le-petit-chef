@@ -1,0 +1,89 @@
+.order-summary {
+    background-color: #F6F6F6;
+    font-size: 16px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+    .order-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+        margin: .75rem 0;
+
+        p:first-child {
+            padding-right: 1rem;
+        }
+    }
+
+    h3 {
+        border-bottom: 1px solid $primary-color;
+    }
+
+    footer {
+        border-bottom: 1px solid $primary-color;
+        border-top: 1px solid $primary-color;
+        font-size: 18px;
+        margin-bottom: 2rem;
+        padding: .85rem 0;
+
+        .order-item {
+            margin: .25rem 0;
+        }
+
+        small {
+            color: #8C8C8C;
+            font-size: 14px;
+            font-weight: normal;
+        }
+    }
+}
+
+
+.discount {
+    margin: 20px 0;
+    text-align: center;
+    border: 1px solid $primary-color;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4px;
+
+    a {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.terms {
+    margin: 40px 0 20px;
+
+    &-list {
+        background-color: #F6F6F6;
+        padding: 10px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        color: #8C8C8C;
+        font-size: 12px;
+        line-height: 15px;
+        list-style: none;
+        position: relative;
+
+        &::before {
+            content: url("../images/iconAngleRight.png");
+            position: absolute;
+            left: -18px; 
+            font-size: 1.2rem; 
+        }
+    }
+
+}

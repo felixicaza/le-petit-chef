@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .logo {
+        width: 100px;
+        margin: 0 .5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+.header {
+    &-brand,
+    &-user {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        p {
+            color: #8C8C8C;
+        }
+    }
+}

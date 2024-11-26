@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 16px;
+
+    @media screen and (min-width: 768px) {
+        width: 90%;
+    }
+}
+
+.footer-nav {
+    margin: 2rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    gap: .25rem;
+
+    @media screen and (min-width: 768px) {
+        margin: 3rem 0 2rem;
+        gap: 0rem;
+    }
+}
+
+p.other-people {
+    align-items: center;
+    background-color: #dedede;
+    display: flex;
+    gap: 0.85rem;
+    grid-column: span 2;
+    margin: 1rem -20px -20px;
+    padding: 1rem 3rem;
+    width: 100vw;
+
+    &::before {
+        content: url("../images/iconOtherXPeople.png");
+    }
+
+    .footer-nav.one-btn ~ & {
+        @media screen and (min-width: 768px) {
+            margin: -4rem 0 2rem;
+        }
+        
+    }
+
+    @media screen and (min-width: 768px) {
+        margin: 3rem 0;
+        background-color: transparent;
+        padding: 0;
+        justify-content: flex-end;
+        width: auto;
+    }
+}
+
+
+
+h2.title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem; 
+    margin: 20px 0;
+
+    @media screen and (min-width: 768px) {
+        font-size: 2rem; 
+    }
+
+    &::before, &::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid #ccc; // Color y grosor de la línea
+        margin: 0 8px; // Espacio entre la línea y el texto
+    }
+
+    &.light {
+        color: #8C8C8C;
+        font-weight: 400;
+    }
+
+    span {
+        display: flex;
+        flex-direction: column;
+        max-width: 70%;
+    }
+
+    small {
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+
+a {
+    &.link-text {
+        color: $primary-color;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
+
+.btn {
+    background-color: #8C8C8C;
+    border: 1px solid #818181;
+    color: #ffffff;
+    display: flex;
+    font-weight: bold;
+    gap: .5rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+
+    &:last-child {
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        padding: 1rem 2.5rem;
+
+        @media screen and (min-width: 768px) {
+            padding: 1rem 3.5rem;
+        }
+    }
+
+    &-back {
+        span { display: none;}
+
+        @media screen and (min-width: 768px) {
+            span { display: inline;}
+        }
+
+        &:before {
+            content: url("../images/iconLeftBtn.png");
+        }
+    }
+
+    &-next {
+        justify-content: end;
+        &:after {
+            content: url("../images/iconLeftBtn.png");
+            transform: rotate(180deg);
+        }
+    }
+    
+    &-pay {
+        justify-content: end;
+        &:before {
+            content: url("../images/iconCreditCardGive.png");
+        }
+    }
+}
+
+ul.listCustom {
+    list-style-image: url("../images/bulletList.png");
+    text-align: justify;
+    margin: 1rem;
+
+    li {
+        margin: .75rem 0;
+    }
+}
+
+
+
+
+// Responsive
+.d-none {
+    display: none;
+}
+.d-block {
+    display: block;
+}
+
+.sm-block {
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+}
+.sm-none {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
