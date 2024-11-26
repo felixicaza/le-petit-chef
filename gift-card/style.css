@@ -221,6 +221,10 @@ body {
   flex-direction: column;
   gap: 24px;
 
+  @media (width >= 768px) {
+    display: none;
+  }
+
   .steps {
     display: flex;
     justify-content: space-between;
@@ -285,8 +289,13 @@ body {
 
     .gift-cards {
       display: grid;
-      grid-template-columns: 1fr 1fr;
       gap: 10px;
+      width: fit-content;
+      margin-inline: auto;
+
+      @media (width >= 768px) {
+        grid-template-columns: 1fr 1fr;
+      }
 
       &.hide {
         display: none;
@@ -422,8 +431,12 @@ body {
 
       .default-amounts {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
+
+        @media (width >= 768px) {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
 
         button {
           cursor: pointer;
@@ -535,8 +548,13 @@ body {
 
       .card-3d-container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 24px 12px;
+        width: fit-content;
+        margin-inline: auto;
+
+        @media (width >= 768px) {
+          grid-template-columns: 1fr 1fr;
+        }
 
         .gift-3d {
           cursor: pointer;
@@ -656,6 +674,11 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr;
 
+      .toy-image {
+        width: 65%;
+        object-fit: cover;
+      }
+
       .toy-buttons {
         display: flex;
         flex-direction: column;
@@ -774,6 +797,10 @@ body {
         width: fit-content;
         font-weight: 600;
         transition: background 300ms ease;
+
+        .label-mobile {
+          display: none;
+        }
 
         &:hover {
           background: var(--primary-color-button-hover);
