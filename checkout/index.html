@@ -78,8 +78,19 @@
 
       <div class="calendar">
         <div class="calendar-title">
+          <button>
+            <svg width="16" height="16" fill="none">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.88"
+                d="M14.4 7.28H3.17M8.78 13.41 2.53 7.28l6.25-6.14" />
+            </svg>
+          </button>
           <h3 class="calendar-month">May 2024</h3>
-          <a href="select-time.html" class="calendar-button calendar-next">June</a>
+          <button>
+            <svg width="16" height="16" fill="none">
+              <path style="translate: 0 -11.5px" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="1.88" d="m2.57 18.75 11.25-.05M8.17 12.59l6.27 6.1-6.23 6.17" />
+            </svg>
+          </button>
         </div>
 
         <div class="calendar-days">
@@ -104,26 +115,26 @@
           <div class="calendar-days-item calendar-days-soldout">
             5 <span>Sold Out</span>
           </div>
-          <a href="select-time.html" class="calendar-days-item calendar-days-free">6</a>
+          <button type="button" class="calendar-days-item calendar-days-free">6</button>
           <div class="calendar-days-item">7</div>
 
           <div class="calendar-days-item">8</div>
-          <a href="select-time.html" class="calendar-days-item calendar-days-free">9</a>
-          <a href="select-time.html" class="calendar-days-item calendar-days-free">10</a>
+          <button type="button" class="calendar-days-item calendar-days-free">9</button>
+          <button type="button" class="calendar-days-item calendar-days-free">10</button>
           <div class="calendar-days-item calendar-days-fewseats">
             11 <span>Few seats left!</span>
           </div>
           <div class="calendar-days-item calendar-days-soldout">
             12 <span>Sold Out</span>
           </div>
-          <a href="select-time.html" class="calendar-days-item calendar-days-free">13</a>
+          <button type="button" class="calendar-days-item calendar-days-free">13</button>
           <div class="calendar-days-item">14</div>
 
           <div class="calendar-days-item">15</div>
           <div class="calendar-days-item calendar-days-soldout">
             16 <span>Sold Out</span>
           </div>
-          <a href="select-time.html" class="calendar-days-item calendar-days-free">17</a>
+          <button type="button" class="calendar-days-item calendar-days-free">17</button>
           <div class="calendar-days-item calendar-days-fewseats">
             18 <span>Few seats left!</span>
           </div>
@@ -136,15 +147,15 @@
           <div class="calendar-days-item">21</div>
 
           <div class="calendar-days-item">22</div>
-          <a href="select-time.html" class="calendar-days-item calendar-days-free">23</a>
-          <a href="select-time.html" class="calendar-days-item calendar-days-free">24</a>
-          <a href="select-time.html" class="calendar-days-item calendar-days-free">25</a>
-          <a href="select-time.html" class="calendar-days-item calendar-days-free">26</a>
-          <a href="select-time.html" class="calendar-days-item calendar-days-free">27</a>
+          <button type="button" class="calendar-days-item calendar-days-free">23</button>
+          <button type="button" class="calendar-days-item calendar-days-free">24</button>
+          <button type="button" class="calendar-days-item calendar-days-free">25</button>
+          <button type="button" class="calendar-days-item calendar-days-free">26</button>
+          <button type="button" class="calendar-days-item calendar-days-free">27</button>
           <div class="calendar-days-item">28</div>
 
           <div class="calendar-days-item">29</div>
-          <a href="select-time.html" class="calendar-days-item calendar-days-free">30</a>
+          <button type="button" class="calendar-days-item calendar-days-free">30</button>
           <div class="calendar-days-item"></div>
           <div class="calendar-days-item"></div>
           <div class="calendar-days-item"></div>
@@ -152,6 +163,46 @@
           <div class="calendar-days-item"></div>
         </div>
       </div>
+
+      <dialog>
+        <section>
+          <button class="close-dialog" type="button">X</button>
+          <h2>
+            <p>Select Time</p>
+            <p>Friday, 12th May 2024</p>
+          </h2>
+          <div class="timeslots">
+            <a class="timeslot available" href="/select-menu.html">15:30</a>
+            <a class="timeslot available" href="/select-menu.html">16:00</a>
+            <a class="timeslot available" href="/select-menu.html">16:30</a>
+            <a class="timeslot few-seats" href="/select-menu.html">
+              <span>17:00</span>
+              <span>Few seats left!</span>
+            </a>
+            <a class="timeslot available" href="/select-menu.html">17:30</a>
+            <a class="timeslot few-seats" href="/select-menu.html">
+              <span>20:30</span>
+              <span>Few seats left!</span>
+            </a>
+            <a class="timeslot available" href="/select-menu.html">21:00</a>
+            <a class="timeslot available" href="/select-menu.html">21:30</a>
+          </div>
+          <nav>
+            <button>
+              <svg width="16" height="16" fill="none">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.88"
+                  d="M14.4 7.28H3.17M8.78 13.41 2.53 7.28l6.25-6.14" />
+              </svg>
+            </button>
+            <button>
+              <svg width="16" height="16" fill="none">
+                <path style="translate: 0 -11.5px" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.88"
+                  d="m2.57 18.75 11.25-.05M8.17 12.59l6.27 6.1-6.23 6.17" />
+              </svg>
+            </button>
+          </nav>
+        </section>
+      </dialog>
 
       <!-- <div class="actions">
                 <button class="next-btn">Next →</button>

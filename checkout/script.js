@@ -69,3 +69,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+const isMobile = navigator.userAgent.match(/Android|iPhone|iPad/i);
+
+if (isMobile) {
+  const $calendarDays = document.querySelector(".calendar-days");
+  const $dialog = document.querySelector("dialog");
+  const $closeDialog = document.querySelector(".close-dialog");
+
+  const DAYS_FREE_SELECTOR = "calendar-days-free";
+  const DAYS_FEWSEATS_SELECTOR = "calendar-days-fewseats";
+
+  $calendarDays?.addEventListener("click", ({target}) => {
+    if (target.classList.contains(DAYS_FREE_SELECTOR) || target.classList.contains(DAYS_FEWSEATS_SELECTOR)) {
+      $dialog.showModal();
+    }
+  })
+
+  $closeDialog?.addEventListener("click", () => {
+    $dialog.close();
+  })
+}

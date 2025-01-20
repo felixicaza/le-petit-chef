@@ -348,8 +348,21 @@ header h1 {
 
 .calendar-title {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
+
+.calendar-title button {
+  background: none;
+  border: none;
+  color: #ee6d44;
+}
+
+.calendar-title button:is(:hover, :active, :focus) {
+  color: color-mix(in srgb, #e06c00 100%, #000 30%);
+}
+
 .calendar-month {
   font-size: 1.4rem;
   font-weight: 700;
@@ -417,6 +430,7 @@ header h1 {
   color: #557d27;
   background-color: #e5eeda;
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;
 
   &:hover {
     background-color: #7bac43;
@@ -895,4 +909,127 @@ header h1 {
   text-align: center;
   color: gray;
   font-size: 14px;
+}
+
+@starting-style {
+  dialog[open] {
+    opacity: 0;
+  }
+}
+
+@starting-style {
+  dialog[open]::backdrop {
+    opacity: 0;
+  }
+}
+
+dialog {
+  width: 100%;
+  max-width: 240px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border: none;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 300ms ease-out, display 400ms allow-discrete,
+      overlay 400ms allow-discrete;
+}
+
+dialog[open] {
+  opacity: 1;
+}
+
+dialog::backdrop {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity 300ms ease-out, display 400ms allow-discrete;
+}
+
+dialog[open]::backdrop {
+  opacity: 1;
+}
+
+dialog > section {
+  --padding-block: 20px;
+  --padding-inline: 10px;
+
+  padding: var(--padding-block) var(--padding-inline);
+  text-align: center;
+  position: relative;
+}
+
+dialog > section > .close-dialog {
+  position: absolute;
+  top: calc(var(--padding-block) / 2);
+  right: var(--padding-inline);
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+dialog h2 {
+  font-size: 1rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+
+dialog .timeslots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  padding-block: 10px;
+}
+
+dialog .timeslot {
+  text-decoration: none;
+}
+
+dialog .timeslot.available {
+  display: grid;
+  place-items: center;
+  color: #557d27;
+  background-color: #e0f7e0;
+  padding: 24px;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+dialog .timeslot:hover {
+  background-color: #7bac43;
+  color: #fff;
+}
+
+dialog .timeslot.few-seats {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  background-color: #fef0e0;
+  padding: 15px 10px;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+dialog .timeslot.few-seats:hover {
+  background-color: #ffe1be;
+  color: #ee6d44;
+}
+
+dialog nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+dialog nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ee6d44;
+  transition: color 300ms ease;
+}
+
+dialog nav button:active {
+  color: color-mix(in srgb, #e06c00 100%, #000 30%);
 }
