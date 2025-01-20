@@ -346,6 +346,16 @@ header h1 {
   background-image: none;
 }
 
+@media (width >= 1200px) {
+  .checkout-container {
+    --gap-size: 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    gap: var(--gap-size);
+  }
+}
+
 .calendar-title {
   display: flex;
   justify-content: center;
@@ -403,12 +413,19 @@ header h1 {
     height: 5rem;
   }
 }
+
 .calendar-days .calendar-days-item span {
   font-size: 0.7rem;
   text-align: center;
   padding: 0 0.2rem;
-  line-height: 0.7rem;
 }
+
+@media (width <= 1199.98px) {
+  .calendar-days .calendar-days-item span {
+    line-height: 0.7rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .calendar-days .calendar-days-item span {
     font-size: 1rem;
@@ -532,6 +549,30 @@ header h1 {
   &:hover {
     background-color: #ffe1be;
     color: #ee6d44;
+  }
+}
+
+.time-container {
+  display: none;
+}
+
+@media (width >= 1200px) {
+  .time-container {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    position: relative;
+  }
+
+  .time-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    translate: calc(calc(var(--gap-size) / 2) * -1) 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ee6d44;
   }
 }
 
@@ -976,18 +1017,26 @@ dialog h2 {
   border-bottom: 1px solid #000;
 }
 
-dialog .timeslots {
+.timeslots {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
   padding-block: 10px;
 }
 
-dialog .timeslot {
+@media (width >= 1200px) {
+  .timeslots {
+    gap: 16px;
+    grid-template-columns: 1fr;
+    padding-block: 0px;
+  }
+}
+
+.timeslot {
   text-decoration: none;
 }
 
-dialog .timeslot.available {
+.timeslot.available {
   display: grid;
   place-items: center;
   color: #557d27;
@@ -996,21 +1045,22 @@ dialog .timeslot.available {
   transition: background-color 300ms ease, color 300ms ease;
 }
 
-dialog .timeslot:hover {
+.timeslot:hover {
   background-color: #7bac43;
   color: #fff;
 }
 
-dialog .timeslot.few-seats {
+.timeslot.few-seats {
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: #000;
   background-color: #fef0e0;
   padding: 15px 10px;
   transition: background-color 300ms ease, color 300ms ease;
 }
 
-dialog .timeslot.few-seats:hover {
+.timeslot.few-seats:hover {
   background-color: #ffe1be;
   color: #ee6d44;
 }
